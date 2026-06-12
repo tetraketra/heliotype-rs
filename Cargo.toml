@@ -1,0 +1,15 @@
+[package]
+name = "heliotype-rs"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+cargo-apk = "0.10.0"
+slint = { version = "1.16.1", features = ["backend-android-activity-06"] }
+
+[lib]
+crate-type = ["cdylib"]
+
+[package.metadata.android.sdk]
+min_sdk_version = 36
+target_sdk_version = 36
