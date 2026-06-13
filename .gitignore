@@ -6,6 +6,7 @@ Cargo.lock
 *.pdb
 /target
 
-# Build Tools
+# Build Stuffs
 .env
-.vscode
+.emu*
+!.vscode # You need project-specific settings for this.

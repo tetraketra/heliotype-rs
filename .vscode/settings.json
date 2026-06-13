@@ -1,0 +1,4 @@
+{
+    "rust-analyzer.cargo.target": "aarch64-linux-android",
+    "slint.libraryPaths": {"material": "ui/material/material.slint"},
+}

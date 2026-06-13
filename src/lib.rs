@@ -1,14 +1,12 @@
-// VSCODE: { "rust-analyzer.cargo.target": "aarch64-linux-android" }
-// #[cfg(target_os = "android")]
+use slint::android::{self, AndroidApp};
+
+slint::include_modules!();
+
 #[unsafe(no_mangle)]
-fn android_main(app: slint::android::AndroidApp) {
-    slint::android::init(app).unwrap();
+fn android_main(app: AndroidApp) {
+    android::init(app).expect("slint android init failed");
 
-    slint::slint! {
-        export component MainWindow inherits Window {
-            Text { text: "Hello world!"; }
-        }
-    }
+    let ui = App::new().expect("ui init failed");
 
-    MainWindow::new().unwrap().run().unwrap();
+    ui.run().expect("ui runtime failed");
 }
